@@ -1,0 +1,6 @@
+framework module Pods_tj_vcam {
+  umbrella header "Pods-tj-vcam-umbrella.h"
+
+  export *
+  module * { export * }
+}
