@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		96877FA009B54D767DD29D8C /* Pods_tj_vcam.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04C997BEB88ACCCB04DDFBF1 /* Pods_tj_vcam.framework */; };
+		FE0FC1CF2127C8A2006ACE6E /* Syphon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE0FC1CE2127C8A2006ACE6E /* Syphon.framework */; };
+		FE0FC1D92127CA11006ACE6E /* tj_vcam_CMIOPluginPlugIn.m in Sources */ = {isa = PBXBuildFile; fileRef = FE0FC1D82127CA11006ACE6E /* tj_vcam_CMIOPluginPlugIn.m */; };
+		FE0FC1DF2127E087006ACE6E /* tj_vcam_CMIOPlugin.exp in Sources */ = {isa = PBXBuildFile; fileRef = FE0FC1DE2127E087006ACE6E /* tj_vcam_CMIOPlugin.exp */; };
 		FE7D30E6212663C00032FAF0 /* tj_vcam_perfPane.h in Headers */ = {isa = PBXBuildFile; fileRef = FE7D30E5212663C00032FAF0 /* tj_vcam_perfPane.h */; };
 		FE7D30E8212663C00032FAF0 /* tj_vcam_perfPane.m in Sources */ = {isa = PBXBuildFile; fileRef = FE7D30E7212663C00032FAF0 /* tj_vcam_perfPane.m */; };
 		FE7D30EA212663C00032FAF0 /* tj_vcam_perfPane.tiff in Resources */ = {isa = PBXBuildFile; fileRef = FE7D30E9212663C00032FAF0 /* tj_vcam_perfPane.tiff */; };
@@ -31,6 +34,12 @@
 		04C997BEB88ACCCB04DDFBF1 /* Pods_tj_vcam.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_tj_vcam.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		342C1CB014EDBA9504D9B7B0 /* Pods-tj-vcam.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-tj-vcam.debug.xcconfig"; path = "Pods/Target Support Files/Pods-tj-vcam/Pods-tj-vcam.debug.xcconfig"; sourceTree = "<group>"; };
 		8D0C70199DC45A54225A7CBE /* Pods-tj-vcam.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-tj-vcam.release.xcconfig"; path = "Pods/Target Support Files/Pods-tj-vcam/Pods-tj-vcam.release.xcconfig"; sourceTree = "<group>"; };
+		FE0FC1CE2127C8A2006ACE6E /* Syphon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Syphon.framework; sourceTree = "<group>"; };
+		FE0FC1D52127CA11006ACE6E /* tj-vcam.CMIOPlugin.plugin */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "tj-vcam.CMIOPlugin.plugin"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FE0FC1D72127CA11006ACE6E /* tj_vcam_CMIOPluginPlugIn.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = tj_vcam_CMIOPluginPlugIn.h; sourceTree = "<group>"; };
+		FE0FC1D82127CA11006ACE6E /* tj_vcam_CMIOPluginPlugIn.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = tj_vcam_CMIOPluginPlugIn.m; sourceTree = "<group>"; };
+		FE0FC1DA2127CA11006ACE6E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FE0FC1DE2127E087006ACE6E /* tj_vcam_CMIOPlugin.exp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.exports; path = tj_vcam_CMIOPlugin.exp; sourceTree = "<group>"; };
 		FE7D30E3212663C00032FAF0 /* tj-vcam-perfPane.prefPane */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "tj-vcam-perfPane.prefPane"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FE7D30E5212663C00032FAF0 /* tj_vcam_perfPane.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = tj_vcam_perfPane.h; sourceTree = "<group>"; };
 		FE7D30E7212663C00032FAF0 /* tj_vcam_perfPane.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = tj_vcam_perfPane.m; sourceTree = "<group>"; };
@@ -42,10 +51,18 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		FE0FC1D12127CA11006ACE6E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		FE7D30DF212663C00032FAF0 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FE0FC1CF2127C8A2006ACE6E /* Syphon.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -72,12 +89,24 @@
 		F11F7EFC50175ADA32611E80 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				FE0FC1CE2127C8A2006ACE6E /* Syphon.framework */,
 				04C997BEB88ACCCB04DDFBF1 /* Pods_tj_vcam.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		FE7D30E4212663C00032FAF0 /* tj-vcam-perfPane */ = {
+		FE0FC1D62127CA11006ACE6E /* tj-vcam.CMIOPlugin */ = {
+			isa = PBXGroup;
+			children = (
+				FE0FC1D72127CA11006ACE6E /* tj_vcam_CMIOPluginPlugIn.h */,
+				FE0FC1D82127CA11006ACE6E /* tj_vcam_CMIOPluginPlugIn.m */,
+				FE0FC1DA2127CA11006ACE6E /* Info.plist */,
+				FE0FC1DE2127E087006ACE6E /* tj_vcam_CMIOPlugin.exp */,
+			);
+			path = "tj-vcam.CMIOPlugin";
+			sourceTree = "<group>";
+		};
+		FE7D30E4212663C00032FAF0 /* tj-vcam.perfPane */ = {
 			isa = PBXGroup;
 			children = (
 				FE7D30E5212663C00032FAF0 /* tj_vcam_perfPane.h */,
@@ -86,14 +115,15 @@
 				FE7D30EB212663C00032FAF0 /* tj_vcam_perfPane.xib */,
 				FE7D30EE212663C00032FAF0 /* Info.plist */,
 			);
-			path = "tj-vcam-perfPane";
+			path = "tj-vcam.perfPane";
 			sourceTree = "<group>";
 		};
 		FEF13C2921257940006EECE0 = {
 			isa = PBXGroup;
 			children = (
 				FEF13C3421257940006EECE0 /* tj-vcam */,
-				FE7D30E4212663C00032FAF0 /* tj-vcam-perfPane */,
+				FE7D30E4212663C00032FAF0 /* tj-vcam.perfPane */,
+				FE0FC1D62127CA11006ACE6E /* tj-vcam.CMIOPlugin */,
 				FEF13C3321257940006EECE0 /* Products */,
 				A55642671C0F89B782C08349 /* Pods */,
 				F11F7EFC50175ADA32611E80 /* Frameworks */,
@@ -105,6 +135,7 @@
 			children = (
 				FEF13C3221257940006EECE0 /* tj-vcam */,
 				FE7D30E3212663C00032FAF0 /* tj-vcam-perfPane.prefPane */,
+				FE0FC1D52127CA11006ACE6E /* tj-vcam.CMIOPlugin.plugin */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -131,6 +162,24 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
+		FE0FC1D42127CA11006ACE6E /* tj-vcam.CMIOPlugin */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FE0FC1DB2127CA11006ACE6E /* Build configuration list for PBXNativeTarget "tj-vcam.CMIOPlugin" */;
+			buildPhases = (
+				FE0FC1D02127CA11006ACE6E /* Sources */,
+				FE0FC1D12127CA11006ACE6E /* Frameworks */,
+				FE0FC1D22127CA11006ACE6E /* Resources */,
+				FE0FC1D32127CA11006ACE6E /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "tj-vcam.CMIOPlugin";
+			productName = "tj-vcam.CMIOPlugin";
+			productReference = FE0FC1D52127CA11006ACE6E /* tj-vcam.CMIOPlugin.plugin */;
+			productType = "com.apple.product-type.bundle";
+		};
 		FE7D30E2212663C00032FAF0 /* tj-vcam-perfPane */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = FE7D30EF212663C00032FAF0 /* Build configuration list for PBXNativeTarget "tj-vcam-perfPane" */;
@@ -178,6 +227,10 @@
 				LastUpgradeCheck = 0920;
 				ORGANIZATIONNAME = tajoy;
 				TargetAttributes = {
+					FE0FC1D42127CA11006ACE6E = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
 					FE7D30E2212663C00032FAF0 = {
 						CreatedOnToolsVersion = 9.2;
 						ProvisioningStyle = Automatic;
@@ -203,11 +256,19 @@
 			targets = (
 				FEF13C3121257940006EECE0 /* tj-vcam */,
 				FE7D30E2212663C00032FAF0 /* tj-vcam-perfPane */,
+				FE0FC1D42127CA11006ACE6E /* tj-vcam.CMIOPlugin */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		FE0FC1D22127CA11006ACE6E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		FE7D30E1212663C00032FAF0 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -253,9 +314,31 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		FE0FC1D32127CA11006ACE6E /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# This shell script simply copies the built plug-in to \"~/Library/Graphics/Quartz Composer Plug-Ins\" and overrides any previous version at that location\n\nmkdir -p \"$USER_LIBRARY_DIR/Graphics/Quartz Composer Plug-Ins\"\nrm -rf \"$USER_LIBRARY_DIR/Graphics/Quartz Composer Plug-Ins/tj-vcam.CMIOPlugin.plugin\"\ncp -rf \"$BUILT_PRODUCTS_DIR/tj-vcam.CMIOPlugin.plugin\" \"$USER_LIBRARY_DIR/Graphics/Quartz Composer Plug-Ins/\"\n";
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		FE0FC1D02127CA11006ACE6E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FE0FC1D92127CA11006ACE6E /* tj_vcam_CMIOPluginPlugIn.m in Sources */,
+				FE0FC1DF2127E087006ACE6E /* tj_vcam_CMIOPlugin.exp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		FE7D30DE212663C00032FAF0 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -286,11 +369,43 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		FE0FC1DC2127CA11006ACE6E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = "tj-vcam.CMIOPlugin/Info.plist";
+				INSTALL_MODE_FLAG = "u+w,og-w,a+rX";
+				INSTALL_PATH = "$(HOME)/Library/CoreMediaIO/Plug-Ins/DAL";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.github.tajoy.tj-vcam-CMIOPlugin";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = plugin;
+			};
+			name = Debug;
+		};
+		FE0FC1DD2127CA11006ACE6E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = "tj-vcam.CMIOPlugin/Info.plist";
+				INSTALL_MODE_FLAG = "u+w,og-w,a+rX";
+				INSTALL_PATH = "$(HOME)/Library/CoreMediaIO/Plug-Ins/DAL";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.github.tajoy.tj-vcam-CMIOPlugin";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = plugin;
+			};
+			name = Release;
+		};
 		FE7D30F0212663C00032FAF0 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = "tj-vcam-perfPane/Info.plist";
 				INSTALL_PATH = "$(HOME)/Library/PreferencePanes";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.github.tajoy.tj-vcam-perfPane";
@@ -304,6 +419,10 @@
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = "tj-vcam-perfPane/Info.plist";
 				INSTALL_PATH = "$(HOME)/Library/PreferencePanes";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.github.tajoy.tj-vcam-perfPane";
@@ -441,6 +560,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		FE0FC1DB2127CA11006ACE6E /* Build configuration list for PBXNativeTarget "tj-vcam.CMIOPlugin" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FE0FC1DC2127CA11006ACE6E /* Debug */,
+				FE0FC1DD2127CA11006ACE6E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		FE7D30EF212663C00032FAF0 /* Build configuration list for PBXNativeTarget "tj-vcam-perfPane" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
